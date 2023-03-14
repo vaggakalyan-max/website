@@ -1,0 +1,57 @@
+.wrapper:hover #slide {
+  transition: 1s;
+  right: 0; /* SET THE SLIDER TO BE 0 */
+}
+#slide {
+  position: absolute;
+  right: 900px;
+  width: 100vw;
+  height: 65vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #fffffc;
+  flex-direction: column;
+  transition: all linear 0.5s;
+  /* background-color: red; */
+}
+.about-inner-con {
+  width: 100vw;
+  width: flex;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* background-color: lightseagreen; */
+  margin-top: -30px;
+}
+.about-text-con {
+  width: 60vw;
+  height: 40vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  flex-direction: column;
+  /* background-color: lightcoral; */
+}
+.about-head {
+  align-self: flex-start;
+  margin-left: 5vw;
+  font-size: 25px;
+  margin-top: 40px;
+  margin-bottom: -10px;
+}
+.description-title {
+  font-size: 25px;
+  align-self: flex-start;
+  height: 1vh;
+}
+.my-description {
+  font-size: 20px;
+  width: 60vw;
+  height: 39vh;
+}
+.my-image {
+  width: 20vw;
+  height: 55vh;
+}

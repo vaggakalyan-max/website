@@ -1,0 +1,32 @@
+.Header-Con {
+  background-color: #282c34;
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: fixed;
+}
+a {
+  color: white;
+}
+
+.Nav-container {
+  width: 95vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.nav-items-con {
+  width: 35vw;
+}
+
+.nav-each-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
