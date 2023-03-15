@@ -1,10 +1,128 @@
+import { useState } from "react";
+import { MdLocationPin, MdWifiCalling3 } from "react-icons/md";
+import { HiMail } from "react-icons/hi";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import AboutMe from "./components/AboutMe";
 import Resume from "./components/Resume";
+import ProjectItem from "./components/ProjectItem";
+import TabItem from "./components/TabItem";
 import "./App.css";
 
-function App() {
+const tabsList = [
+  { tabId: "STATIC", displayText: "Static" },
+  { tabId: "RESPONSIVE", displayText: "Responsive" },
+  { tabId: "DYNAMIC", displayText: "Dynamic" },
+];
+
+const projectsList = [
+  {
+    projectId: 0,
+    category: "STATIC",
+    imageURL: "https://assets.ccbp.in/frontend/react-js/projects-s3-img.png",
+    title: "Music Page",
+    description:
+      "The music page enables the users to browse through the images of all-time favorite music albums.",
+  },
+  {
+    projectId: 1,
+    category: "STATIC",
+    imageURL: "https://assets.ccbp.in/frontend/react-js/projects-s4-img.png",
+    title: "Tourism Website",
+    description:
+      "A tourism website enables the user to browse through the images of popular destinations.",
+  },
+  {
+    projectId: 2,
+    category: "STATIC",
+    imageURL: "https://assets.ccbp.in/frontend/react-js/projects-s1-img.png",
+    title: "Advanced Technologies",
+    description:
+      "A website that gives you a basic understanding of Advanced Technologies.",
+  },
+  {
+    projectId: 3,
+    category: "STATIC",
+    imageURL: "https://assets.ccbp.in/frontend/react-js/projects-s2-img.png",
+    title: "Happy Meals",
+    description: "Discover the best foods in over 1,000 restaurants.",
+  },
+  {
+    projectId: 4,
+    category: "RESPONSIVE",
+    imageURL: "https://assets.ccbp.in/frontend/react-js/projects-r4-img.png",
+    title: "VR Website",
+    description:
+      "VR Website enables users to explore AR and VR Products and Industry happenings.",
+  },
+  {
+    projectId: 5,
+    category: "RESPONSIVE",
+    imageURL: "https://assets.ccbp.in/frontend/react-js/projects-r2-img.png",
+    title: "Food Munch",
+    description: "Food Much Website is a user-centric food tech website.",
+  },
+  {
+    projectId: 6,
+    category: "RESPONSIVE",
+    imageURL: "https://assets.ccbp.in/frontend/react-js/projects-r3-img.png",
+    title: "Portfolio",
+    description:
+      "A portfolio is the best alternative for a resume to showcase your skills to the digital world.",
+  },
+  {
+    projectId: 7,
+    category: "RESPONSIVE",
+    imageURL: "https://assets.ccbp.in/frontend/react-js/projects-r1-img.png",
+    title: "Design",
+    description:
+      "A website to showcase the best features and give more information about the Design tool.",
+  },
+  {
+    projectId: 8,
+    category: "DYNAMIC",
+    imageURL: "https://assets.ccbp.in/frontend/react-js/projects-d3-img.png",
+    title: "Speed Typing Test",
+    description:
+      "Speed Typing Test Application is capable of calculating the time to type the randomly generated quote.",
+  },
+  {
+    projectId: 9,
+    category: "DYNAMIC",
+    imageURL: "https://assets.ccbp.in/frontend/react-js/projects-d1-img.png",
+    title: "Random Joke Page",
+    description:
+      "Random Joke Page is an API-based dynamic Web Application that generates a new joke.",
+  },
+  {
+    projectId: 10,
+    category: "DYNAMIC",
+    imageURL: "https://assets.ccbp.in/frontend/react-js/projects-d2-img.png",
+    title: "Sizing An Image",
+    description:
+      "This is a dynamic web application capable of adjusting the size of an element using DOM manipulations.",
+  },
+];
+
+const App = () => {
+  const [activeTabId, setActiveTabId] = useState(tabsList[0].tabId);
+
+  const clickTabItem = (tabId) => {
+    setActiveTabId(tabId);
+  };
+
+  const getFilteredProjects = () => {
+    const allFilteredProjects = projectsList.filter(
+      (eachprojectDetails) => eachprojectDetails.category === activeTabId
+    );
+    return allFilteredProjects;
+  };
+
+  const filteredProjects = getFilteredProjects();
+
+  console.log(filteredProjects);
+  // console.log(activeTabId);
+
   return (
     <div className="main">
       {/* <Header /> */}
@@ -60,7 +178,9 @@ function App() {
             <a className="anchor-btn" href="#aboutSection">
               About me
             </a>
-            <a className="anchor-btn">Contact</a>
+            <a className="anchor-btn" href="#contactSection">
+              Contact
+            </a>
           </div>
         </section>
 
@@ -92,7 +212,12 @@ function App() {
         </section>
 
         {/* <Resume />  */}
-        <section className="Resume-con" data-aos="fade-left" id="resumeSection">
+        <section
+          className="Resume-con"
+          id="resumeSection"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
           <h1 className="Resume-head">Resume</h1>
           <div className="Resume-inner-con">
             <div className="Resume-text-con">
@@ -128,9 +253,147 @@ function App() {
             />
           </div>
         </section>
+
+        <section
+          className="portfolio-sec"
+          id="portfolioSection"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <h1 className="Portfolio-head">Portfolio</h1>
+          <div className="portfolio-projects">
+            <ul className="tabs-container">
+              {tabsList.map((tabDetails) => (
+                <TabItem
+                  key={tabDetails.tabId}
+                  tabDetails={tabDetails}
+                  clickTabItem={clickTabItem}
+                  isActive={activeTabId === tabDetails.tabId}
+                />
+              ))}
+            </ul>
+
+            <ul className="project-list-container">
+              {filteredProjects.map((projectDetails) => (
+                <ProjectItem
+                  key={projectDetails.projectId}
+                  projectDetails={projectDetails}
+                />
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        <section className="contact-section" id="contactSection">
+          <div className="container" data-aos="fade-up" data-aos-delay="100">
+            <div className="section-title mb-5 pb-2" data-aos="fade-up">
+              <h2 className="section-heading mt-3">CONTACT ME</h2>
+              <p className="description-contact">
+                Send your Queries through Mail
+              </p>
+            </div>
+            <div className="row contact-mail-con">
+              <div
+                className="location-con"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <div className="infor d-flex flex-column  align-items-stretch">
+                  <div className="address">
+                    <i>
+                      <MdLocationPin />
+                    </i>
+                    <h4>Location:</h4>
+                    <p>Hyderabad, Telangana, India, Pin code-500098</p>
+                  </div>
+
+                  <div className="email">
+                    <i>
+                      <HiMail />
+                    </i>
+                    <h4>Email:</h4>
+                    <p>saitejamacha123@gmail.com</p>
+                  </div>
+
+                  <div className="phone">
+                    <i>
+                      <MdWifiCalling3 />
+                    </i>
+                    <h4>Call:</h4>
+                    <p>+91 9032833121</p>
+                  </div>
+                  {/* <iframe
+                    title={""}
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15125.533395693468!2d84.22316832620785!3d18.601819597786072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3c536c6e44099f%3A0xb501168849671a61!2sTekkali%2C%20Andhra%20Pradesh%20532201!5e0!3m2!1sen!2sin!4v1667020558534!5m2!1sen!2sin"
+                    width="600"
+                    height="450"
+                    style="border:0; width: 100%; height: 314px;"
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe> */}
+                </div>
+              </div>
+              <div className="mail-con" data-aos="fade-up" data-aos-delay="100">
+                <div className="box d-flex flex-column  align-items-stretch">
+                  <h2 className="mb-5">SEND MESSAGE</h2>
+                  <form id="form">
+                    <span id="span"></span>
+                    <div className="inputBox">
+                      <input
+                        type="text"
+                        name="name"
+                        id="fullname"
+                        placeholder="Enter your Full Name"
+                      />
+                      <label htmlFor="fullname">Full Name</label>
+                      <small>Error message</small>
+                    </div>
+                    <div className="inputBox">
+                      <input
+                        type="text"
+                        name="email"
+                        id="email"
+                        placeholder="Enter your valid email address"
+                      />
+                      <label htmlFor="email">Email</label>
+                      <small>Error message</small>
+                    </div>
+                    <div className="inputBox">
+                      <input
+                        type="text"
+                        name="phonenumber"
+                        id="phonenumber"
+                        placeholder="Enter your phone Number"
+                      />
+                      <label htmlFor="phonenumber">Phone Number</label>
+                      <small>Error message</small>
+                    </div>
+                    <div className="inputBox">
+                      <textarea
+                        type="textarea"
+                        placeholder="Type your message here"
+                        name="message"
+                        id="message"
+                        rows="4"
+                        cols="70"
+                      ></textarea>
+                      <label htmlFor="message">Message</label>
+                      <small>Error message</small>
+                    </div>
+
+                    <button type="submit" id="sub">
+                      Send
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   );
-}
+};
 
 export default App;

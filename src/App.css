@@ -50,3 +50,248 @@
     transform: rotate(360deg);
   }
 }
+
+.portfolio-sec {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #edf0f5;
+  flex-direction: column;
+  padding-bottom: 5vh;
+  margin-top: 5vh;
+}
+
+.portfolio-projects {
+  margin-top: 6vh;
+}
+
+.Portfolio-head {
+  align-self: flex-start;
+  margin-left: 5vw;
+  font-size: 30px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.project-list-container {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 12px;
+  margin-bottom: 50px;
+}
+
+@media screen and (min-width: 992px) {
+  .project-list-container {
+    margin-bottom: 150px;
+  }
+}
+
+.tabs-container {
+  max-width: 300px;
+  margin: auto;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+}
+
+@media screen and (min-width: 992px) {
+  .tabs-container {
+    max-width: 455px;
+  }
+}
+
+/* contact-section  */
+
+.contact-section {
+  background-color: rgb(239, 235, 235);
+  display: flex;
+  background-color: #edf0f5;
+  height: 150vh;
+  margin-bottom: 10vh;
+  margin-top: 5vh;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.contact-section .infor {
+  width: 100%;
+  padding: 50px;
+  background-color: rgba(251, 251, 251, 0.8);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(110, 108, 108, 0.5);
+  border-radius: 10px;
+  height: 100vh;
+}
+
+.contact-section .infor i {
+  font-size: 20px;
+  color: #000000;
+  float: left;
+  width: 44px;
+  height: 44px;
+  background: #a9acae;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-section .infor h4 {
+  padding: 0 0 0 60px;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #050d18;
+}
+
+.contact-section .infor p {
+  padding: 0 0 10px 60px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #173b6c;
+}
+
+.contact-section .infor .email p {
+  padding-top: 5px;
+}
+
+.contact-section .infor .email:hover i,
+.contact-section .infor .address:hover i,
+.contact-section .infor .phone:hover i {
+  background-color: #000000;
+  color: #a9acae;
+}
+
+.description-contact {
+  color: #000;
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.box {
+  width: 100%;
+  padding: 40px;
+  background-color: rgba(251, 251, 251, 0.8);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(120, 118, 118, 0.5);
+  border-radius: 10px;
+  margin-bottom: 10vh;
+}
+
+.box h2 {
+  margin: 0 0 10px;
+  padding: 0;
+  color: #000;
+  text-align: center;
+  font-weight: 700;
+}
+
+.box .inputBox {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+::placeholder {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.box .inputBox input,
+.box .inputBox textarea {
+  width: 100%;
+  padding: 8px 5px;
+  font-size: 14px;
+  color: #000;
+  margin-top: 10px;
+  margin-bottom: 4px;
+  /* border: none; */
+  border: 1px solid #000;
+  border-radius: 5px;
+  outline: none;
+  background-color: transparent;
+  font-weight: 600;
+}
+
+.box .inputBox label {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #000;
+  pointer-events: none;
+  transition: 0.5s;
+  font-weight: 600;
+}
+
+.box .inputBox input:valid ~ label,
+.box .inputBox textarea:valid ~ label {
+  top: -28px;
+  left: 0;
+  font-size: 16px;
+  color: #595656;
+  font-weight: 600;
+}
+
+#sub {
+  border: none;
+  outline: none;
+  color: #000;
+  background-color: #a9acae;
+  border-radius: 16px;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-weight: bold;
+  /* margin: 15px auto; */
+  display: block;
+  width: 100%;
+  font-size: 18px;
+}
+
+#sub:hover {
+  background-color: #000000;
+  color: #a9acae;
+}
+
+.inputBox small {
+  visibility: hidden;
+  margin: 4px 0;
+}
+
+.inputBox.success input,
+.inputBox.success textarea {
+  border-color: #2ecc71;
+}
+
+.inputBox.error input,
+.inputBox.error textarea {
+  border-color: #e74c3c;
+}
+
+.inputBox.error small {
+  visibility: visible;
+  color: #e74c3c;
+}
+
+.contact-mail-con {
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.location-con {
+  width: 40vw;
+  height: 80vh;
+}
+
+.mail-con {
+  width: 40vw;
+  height: 80vh;
+}
