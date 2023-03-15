@@ -1,19 +1,11 @@
-.wrapper:hover #slide {
-  transition: 1s;
-  right: 0; /* SET THE SLIDER TO BE 0 */
-}
-#slide {
-  position: absolute;
-  right: 900px;
+.about-con {
   width: 100vw;
-  height: 65vh;
+  height: 75vh;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   background-color: #fffffc;
   flex-direction: column;
-  transition: all linear 0.5s;
-  /* background-color: red; */
 }
 .about-inner-con {
   width: 100vw;
@@ -51,6 +43,7 @@
   width: 60vw;
   height: 39vh;
 }
+
 .my-image {
   width: 20vw;
   height: 55vh;

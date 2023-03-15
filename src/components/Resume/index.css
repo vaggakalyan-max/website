@@ -1,0 +1,102 @@
+.Resume-con {
+  width: 100vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #edf0f5;
+  flex-direction: column;
+  padding-bottom: 5vh;
+  margin-top: 5vh;
+}
+.Resume-inner-con {
+  width: 100vw;
+  width: flex;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* background-color: lightseagreen; */
+}
+.Resume-text-con {
+  width: 60vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  flex-direction: column;
+  /* background-color: lightcoral; */
+}
+.Resume-head {
+  align-self: flex-start;
+  margin-left: 5vw;
+  font-size: 30px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+.Resume-description-title {
+  font-size: 25px;
+  align-self: flex-start;
+}
+.Resume-my-description {
+  font-size: 20px;
+  width: 60vw;
+  animation: type 4s steps(14);
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 1px solid transparent;
+  width: 30ch;
+  align-self: flex-start;
+  /* background-color: aquamarine; */
+  margin-top: -5px;
+}
+@keyframes type {
+  0% {
+    width: 0ch;
+  }
+
+  100% {
+    width: 30ch;
+  }
+}
+
+.Resume-skills-list {
+  font-size: 20px;
+  width: 60vw;
+  animation: skills-type 4s steps(10);
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 1px solid transparent;
+  width: 10ch;
+  align-self: flex-start;
+  /* background-color: aquamarine; */
+  margin-top: -5px;
+}
+
+@keyframes skills-type {
+  0% {
+    width: 0ch;
+  }
+
+  100% {
+    width: 10ch;
+  }
+}
+
+.Resume-my-image {
+  width: 20vw;
+  height: 55vh;
+  align-self: flex-start;
+}
+.Resume-Download-anc {
+  border: 2px solid #2f34b5;
+  width: 180px;
+  height: 40px;
+  border-radius: 10px;
+  color: #2f34b5;
+  background-color: transparent;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-start;
+}
