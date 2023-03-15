@@ -201,13 +201,13 @@ const App = () => {
                 I'm Sai Teja Full Stack Web Developer
               </h1>
               <p className="my-description">
-                Although this question seems relatively simple, it can be
-                challenging for candidates to answer effectively. While the
-                question is open-ended, employers generally want you to create a
-                brief yet compelling narrative that sells you as a candidate.
-                They typically want you to discuss your career path, list a few
-                major highlights and end with how your professional past has
-                prepared you for the question.
+                Sample Para Although this question seems relatively simple, it
+                can be challenging for candidates to answer effectively. While
+                the question is open-ended, employers generally want you to
+                create a brief yet compelling narrative that sells you as a
+                candidate. They typically want you to discuss your career path,
+                list a few major highlights and end with how your professional
+                past has prepared you for the question.
               </p>
             </div>
             <img
@@ -249,6 +249,7 @@ const App = () => {
                 className="Resume-Download-anc"
                 // href="https://publuu.com/flip-book/98864/270374/page/1"
                 href="https://drive.google.com/file/d/1DyRMvtgzNC-P6pNkmWOVkalVzmRCwpw2/view"
+                target={"_blank"}
               >
                 Download Resume
               </a>
@@ -411,7 +412,9 @@ const App = () => {
                 />
               </a>
             </div> */}
-            <p>Social Networking Sites</p>
+            <p className="social-heading">
+              Get in Touch --------------------->
+            </p>
 
             <div className="all-icons-con">
               <div className="icon-con">

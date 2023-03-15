@@ -110,8 +110,8 @@
   background-color: rgb(239, 235, 235);
   display: flex;
   background-color: #edf0f5;
-  height: 150vh;
-  margin-bottom: 10vh;
+  height: 130vh;
+  /* margin-bottom: 10vh; */
   margin-top: 5vh;
   display: flex;
   justify-content: flex-start;
