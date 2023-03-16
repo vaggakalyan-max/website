@@ -5,6 +5,7 @@ import { BsLinkedin, BsTwitter, BsFacebook } from "react-icons/bs";
 import { TfiArrowUp } from "react-icons/tfi";
 import { AiFillInstagram } from "react-icons/ai";
 import { VscGithub } from "react-icons/vsc";
+import { GiHamburgerMenu } from "react-icons/gi";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import AboutMe from "./components/AboutMe";
@@ -132,51 +133,120 @@ const App = () => {
     <div className="main">
       {/* <Header /> */}
       <Header />
-      <div className="Header-Con">
-        <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-          <div className="Nav-container">
-            <a className="navbar-brand" href="#homeSection">
-              <img
-                alt="site-logo"
-                className="logo-image"
-                src="data:image/png;base64,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"
-              />
-            </a>
+      {/* <div className="Header-Con"> */}
+      {/* <nav className="navbar navbar-expand-lg navbar-dark Header-Con">
+        <div className="Nav-container">
+          <a className="navbar-brand" href="#homeSection">
+            <img
+              alt="site-logo"
+              className="logo-image"
+              src="data:image/png;base64,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"
+            />
+          </a>
 
-            <div className="nav-items-con" id="navbarNavAltMarkup">
-              <div className="nav-each-item">
-                <a className="homeSection" id="navItem1" href="#homeSection">
-                  <p className="fas fa-home-alt">Home</p>
-                </a>
-                <a className="aboutSection" href="#aboutSection" id="navItem2">
-                  <p className="fa-solid fa-user"> About</p>
-                </a>
-                <a
-                  className="resumeSection"
-                  href="#resumeSection"
-                  id="navItem3"
-                >
-                  <p className="fa-solid fa-file">Resume</p>
-                </a>
-                <a
-                  className="portfolioSection"
-                  href="#portfolioSection"
-                  id="navItem4"
-                >
-                  <p className="fa-solid fa-sliders">Portfolio</p>
-                </a>
-                <a
-                  className="contactSection"
-                  href="#contactSection"
-                  id="navItem5"
-                >
-                  <p className="fa-solid fa-envelope">Contact</p>
-                </a>
-              </div>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="text-center">
+              <i className="fas fa-bars"></i>
+            </span>
+          </button>
+
+          <div
+            className="collapse navbar-collapse all-nav-items-con"
+            id="navbarNavAltMarkup"
+          >
+            <div className="navbar-nav nav-each-item">
+              <a className="homeSection" id="navItem1" href="#homeSection">
+                <p className="fas fa-home-alt">Home</p>
+              </a>
+              <a className="aboutSection" href="#aboutSection" id="navItem2">
+                <p className="fa-solid fa-user"> About</p>
+              </a>
+              <a className="resumeSection" href="#resumeSection" id="navItem3">
+                <p className="fa-solid fa-file">Resume</p>
+              </a>
+              <a
+                className="portfolioSection"
+                href="#portfolioSection"
+                id="navItem4"
+              >
+                <p className="fa-solid fa-sliders">Portfolio</p>
+              </a>
+              <a
+                className="contactSection"
+                href="#contactSection"
+                id="navItem5"
+              >
+                <p className="fa-solid fa-envelope">Contact</p>
+              </a>
             </div>
           </div>
-        </nav>
-      </div>
+        </div>
+      </nav> */}
+      {/* </div> */}
+
+      <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark nav-con">
+        <div className="container">
+          <a className="navbar-brand" href="#homeSection">
+            <img
+              alt="site-logo"
+              className="logo-image"
+              src="data:image/png;base64,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"
+            />
+          </a>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="text-center">
+              <GiHamburgerMenu />
+            </span>
+          </button>
+          <div
+            className="collapse navbar-collapse all-nav-items-con"
+            id="navbarNavAltMarkup"
+          >
+            <div className="navbar-nav ml-auto nav-each-item">
+              <a className="homeSection" id="navItem1" href="#homeSection">
+                <i className="fas fa-home-alt"></i> Home
+                <span className="sr-only">(current)</span>
+              </a>
+              <a className="aboutSection" href="#aboutSection" id="navItem2">
+                <i className="fa-solid fa-user"></i> About
+              </a>
+              <a className="resumeSection" href="#resumeSection" id="navItem3">
+                <i className="fa-solid fa-file"></i> Resume
+              </a>
+              <a
+                className="portfolioSection"
+                href="#portfolioSection"
+                id="navItem4"
+              >
+                <i className="fa-solid fa-sliders"></i> Portfolio
+              </a>
+              <a
+                className="contactSection"
+                href="#contactSection"
+                id="navItem5"
+              >
+                <i className="fa-solid fa-envelope"></i> Contact
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
 
       <div className="App">
         {/* <Home /> */}
@@ -300,6 +370,7 @@ const App = () => {
           data-aos-delay="100"
         >
           <div className="container">
+            {/* mark for tomorrow */}
             <div className="section-title mb-5 pb-2" data-aos="fade-up">
               <h2 className="section-heading mt-3">CONTACT ME</h2>
               <p className="description-contact">

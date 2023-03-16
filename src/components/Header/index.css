@@ -1,18 +1,43 @@
-.Header-Con {
+/* .Header-Con {
   background-color: #282c34;
   width: 100vw;
   height: 10vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: row;
   position: fixed;
-  text-align: center;
-  padding-top: 4px;
-}
-a {
-  color: white;
-  text-decoration: none;
+} */
+
+/* .Nav-container {
+  width: 95vw;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+
+}  */
+@media (min-width: 768px) {
+  .nav-con {
+    height: 10vh;
+  }
+
+  .all-nav-items-con {
+    width: 80vw;
+    height: 10vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .nav-each-item {
+    width: 40vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
 }
 
 .logo-image {
@@ -20,22 +45,7 @@ a {
   height: 50px;
   border-radius: 80px;
 }
-
-.Nav-container {
-  width: 95vw;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-}
-
-.nav-items-con {
-  width: 35vw;
-}
-
-.nav-each-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
+a {
+  color: white;
+  text-decoration: none;
 }
