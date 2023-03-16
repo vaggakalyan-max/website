@@ -146,7 +146,7 @@ const App = () => {
             <div className="nav-items-con" id="navbarNavAltMarkup">
               <div className="nav-each-item">
                 <a className="homeSection" id="navItem1" href="#homeSection">
-                  <p className="fas fa-home-alt">Home</p>
+                  <p className="fas fa-home-alt">HomeH</p>
                 </a>
                 <a className="aboutSection" href="#aboutSection" id="navItem2">
                   <p className="fa-solid fa-user"> About</p>
