@@ -1,7 +1,5 @@
 import "./index.css";
 
-const Footer = () => {
-  const r = "g";
-};
+const Footer = () => {};
 
 export default Footer;

@@ -87,12 +87,12 @@
   align-self: flex-start;
 }
 .Resume-Download-anc {
-  border: 2px solid #2f34b5;
+  border: 0px;
   width: 180px;
   height: 40px;
   border-radius: 10px;
-  color: #2f34b5;
-  background-color: transparent;
+  color: white;
+  background-color: #282c34;
   text-align: center;
   text-decoration: none;
   display: flex;
