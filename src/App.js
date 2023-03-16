@@ -131,6 +131,7 @@ const App = () => {
   return (
     <div className="main">
       {/* <Header /> */}
+      <Header />
       <div className="Header-Con">
         <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
           <div className="Nav-container">
@@ -179,6 +180,7 @@ const App = () => {
 
       <div className="App">
         {/* <Home /> */}
+        <Home />
         <section className="home-con" id="homeSection">
           <div className="home-card">
             <h1 className="home-head">Hello!</h1>
@@ -193,6 +195,7 @@ const App = () => {
         </section>
 
         {/* <AboutMe /> */}
+        <AboutMe />
         <section className="about-con" data-aos="fade-up" id="aboutSection">
           <h1 className="about-head">About Me</h1>
 
@@ -213,6 +216,7 @@ const App = () => {
         </section>
 
         {/* <Resume />  */}
+        <Resume />
         <section
           className="Resume-con"
           id="resumeSection"
@@ -412,6 +416,7 @@ const App = () => {
         </div>
 
         {/* footer */}
+        <Footer />
         <section className="footer-section">
           {/* <div className="footer-logo-con">
               <a className="navbar-brand" href="#homeSection">
