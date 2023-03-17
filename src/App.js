@@ -304,14 +304,19 @@ const App = () => {
               </p>
               <h1 className="Resume-description-title">Skills</h1>
 
-              <p className="Resume-skills-list">
-                Python <br /> <br /> JavaScript <br /> <br />
-                React.Js <br /> <br /> Express.Js <br /> <br />
-                Node.Js <br /> <br /> MongoDb <br /> <br />
-                SQLite <br /> <br /> HTML <br /> <br /> CSS
-                <br /> <br /> Flexbox <br /> <br />
-                Bootstrap <br /> <br /> GitHub
-              </p>
+              <ul className="Resume-skills-list">
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>React.Js</li>
+                <li>Node.Js</li>
+                <li>Express.Js</li>
+                <li>SQLite</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Flexbox</li>
+                <li>Bootstrap</li>
+                <li>GitHub</li>
+              </ul>
 
               <a
                 className="Resume-Download-anc"
@@ -369,7 +374,7 @@ const App = () => {
           data-aos="fade-up"
           data-aos-delay="100"
         >
-          <div className="container">
+          <div className="contact-cards-container">
             {/* mark for tomorrow */}
             <div className="section-title mb-5 pb-2" data-aos="fade-up">
               <h2 className="section-heading mt-3">CONTACT ME</h2>
@@ -378,11 +383,7 @@ const App = () => {
               </p>
             </div>
             <div className="row contact-mail-con">
-              <div
-                className="location-con"
-                data-aos="fade-up"
-                data-aos-delay="100"
-              >
+              <div className="location-con">
                 <div className="infor d-flex flex-column  align-items-stretch">
                   <div className="address">
                     <i>
@@ -419,7 +420,7 @@ const App = () => {
                   ></iframe> */}
                 </div>
               </div>
-              <div className="mail-con" data-aos="fade-up" data-aos-delay="100">
+              <div className="mail-con">
                 <div className="box d-flex flex-column  align-items-stretch">
                   <h2 className="mb-5">SEND MESSAGE</h2>
                   <form id="form">
@@ -489,66 +490,59 @@ const App = () => {
         {/* footer */}
         <Footer />
         <section className="footer-section">
-          {/* <div className="footer-logo-con">
-              <a className="navbar-brand" href="#homeSection">
-                <img
-                  className="logo-image footer-logo"
-                  src="data:image/png;base64,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"
-                />
-              </a>
-            </div> */}
+          <div className="text-and-all-icons-con">
+            <p className="social-heading">Get in Touch ------------------</p>
 
-          <div className="all-icons-con">
-            <p className="social-heading">Get in Touch ---------------------</p>
+            <div className="all-icons-con">
+              <div className="icon-con">
+                <a
+                  href="https://www.linkedin.com/in/saiteja123/"
+                  target={"_blank"}
+                  rel="noopener noreferrer"
+                >
+                  <BsLinkedin className="social-icon" />
+                </a>
+              </div>
 
-            <div className="icon-con">
-              <a
-                href="https://www.linkedin.com/in/saiteja123/"
-                target={"_blank"}
-                rel="noopener noreferrer"
-              >
-                <BsLinkedin className="social-icon" />
-              </a>
-            </div>
+              <div className="icon-con">
+                <a
+                  href="https://github.com/Saitejamacha"
+                  target={"_blank"}
+                  rel="noopener noreferrer"
+                >
+                  <VscGithub className="social-icon" />
+                </a>
+              </div>
 
-            <div className="icon-con">
-              <a
-                href="https://github.com/Saitejamacha"
-                target={"_blank"}
-                rel="noopener noreferrer"
-              >
-                <VscGithub className="social-icon" />
-              </a>
-            </div>
+              <div className="icon-con">
+                <a
+                  href="https://twitter.com/account/access"
+                  target={"_blank"}
+                  rel="noopener noreferrer"
+                >
+                  <BsTwitter className="social-icon" />
+                </a>
+              </div>
 
-            <div className="icon-con">
-              <a
-                href="https://twitter.com/account/access"
-                target={"_blank"}
-                rel="noopener noreferrer"
-              >
-                <BsTwitter className="social-icon" />
-              </a>
-            </div>
+              <div className="icon-con">
+                <a
+                  href="https://www.facebook.com/macha.saiteja.9"
+                  target={"_blank"}
+                  rel="noopener noreferrer"
+                >
+                  <BsFacebook className="social-icon" />
+                </a>
+              </div>
 
-            <div className="icon-con">
-              <a
-                href="https://www.facebook.com/macha.saiteja.9"
-                target={"_blank"}
-                rel="noopener noreferrer"
-              >
-                <BsFacebook className="social-icon" />
-              </a>
-            </div>
-
-            <div className="icon-con">
-              <a
-                href="https://www.instagram.com/saitejamacha/"
-                target={"_blank"}
-                rel="noopener noreferrer"
-              >
-                <AiFillInstagram className="social-icon" />
-              </a>
+              <div className="icon-con">
+                <a
+                  href="https://www.instagram.com/saitejamacha/"
+                  target={"_blank"}
+                  rel="noopener noreferrer"
+                >
+                  <AiFillInstagram className="social-icon" />
+                </a>
+              </div>
             </div>
 
             <p className="social-heading">All Rights Reserved</p>

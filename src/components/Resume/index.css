@@ -35,18 +35,16 @@
 .Resume-description-title {
   font-size: 25px;
   align-self: flex-start;
+  margin-top: 10px;
 }
 .Resume-my-description {
   font-size: 20px;
   width: 60vw;
   animation: type 4s steps(14);
   overflow: hidden;
-  white-space: nowrap;
-  border-right: 1px solid transparent;
-  width: 30ch;
   align-self: flex-start;
   /* background-color: aquamarine; */
-  margin-top: -5px;
+  margin-top: 5px;
 }
 @keyframes type {
   0% {
@@ -59,31 +57,21 @@
 }
 
 .Resume-skills-list {
+  list-style-type: disc;
   font-size: 20px;
   width: 60vw;
-  animation: skills-type 4s steps(10);
   overflow: hidden;
   white-space: nowrap;
   border-right: 1px solid transparent;
   width: 10ch;
   align-self: flex-start;
   /* background-color: aquamarine; */
-  margin-top: -5px;
-}
-
-@keyframes skills-type {
-  0% {
-    width: 0ch;
-  }
-
-  100% {
-    width: 10ch;
-  }
+  margin-top: 5px;
 }
 
 .Resume-my-image {
-  width: 20vw;
-  height: 55vh;
+  width: 30vw;
+  height: 25vh;
   align-self: flex-start;
 }
 .Resume-Download-anc {
@@ -99,4 +87,12 @@
   justify-content: center;
   align-items: center;
   align-self: flex-start;
+}
+
+@media (min-width: 768px) {
+  .Resume-my-image {
+    width: 20vw;
+    height: 55vh;
+    align-self: flex-start;
+  }
 }

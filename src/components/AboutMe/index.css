@@ -1,6 +1,6 @@
 .about-con {
   width: 100vw;
-  height: 55vh;
+  min-height: 55vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,30 +10,28 @@
 
 .about-text-con {
   width: 90vw;
-  height: 40vh;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
   /* background-color: lightcoral; */
   text-align: left;
+  margin-top: 10px;
 }
 .about-head {
   align-self: flex-start;
   margin-left: 5vw;
   font-size: 25px;
-  /* margin-top: 40px;
-  margin-bottom: -10px; */
+  /* margin-top: 10px;
+  margin-bottom: 20px; */
 }
 .description-title {
   font-size: 25px;
-  height: 1vh;
 }
 .my-description {
   align-self: flex-start;
   font-size: 20px;
   width: 90vw;
-  height: 39vh;
 }
 
 .my-image {
