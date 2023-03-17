@@ -88,7 +88,11 @@
   align-self: flex-start;
 }
 
-@media only screen and (min-width: 850px) and (max-width: 1001px) {
+@media only screen and (min-width: 850px) and (max-width: 1000px) {
+  .Resume-con {
+    margin-top: 3vh;
+  }
+
   .Resume-my-image {
     width: 20vw;
     max-height: 10vh;
@@ -97,7 +101,7 @@
   }
 }
 
-@media (min-width: 868px) {
+@media (min-width: 1000px) {
   .Resume-my-image {
     width: 20vw;
     height: 55vh;

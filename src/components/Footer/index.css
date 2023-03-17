@@ -51,14 +51,11 @@
 
 @media only screen and (min-width: 850px) and (max-width: 1000px) {
   .footer-section {
-    max-height: 8vh;
     flex-direction: row;
-    margin-top: -5vh;
-    /* background-color: red; */
   }
   .social-heading {
     color: white;
-    margin-top: 4px;
+    margin-top: 5px;
   }
 }
 
