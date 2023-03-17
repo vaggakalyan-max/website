@@ -49,14 +49,19 @@
   margin-top: 4px;
 }
 
-@media only screen and (min-width: 850px) and (max-width: 1001px) {
+@media only screen and (min-width: 850px) and (max-width: 1000px) {
   .footer-section {
     max-height: 8vh;
+    flex-direction: column;
     /* background-color: red; */
+  }
+  .social-heading {
+    color: white;
+    margin-top: 4px;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .footer-section {
     height: 10vh;
     flex-direction: column;
