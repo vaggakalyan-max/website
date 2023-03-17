@@ -18,7 +18,7 @@
   color: #abada6;
   padding-top: 50px;
   transform: rotate(-4deg);
-  margin-left: 20px;
+  margin-left: 25px;
 }
 
 .home-head {
@@ -47,15 +47,20 @@
   font-size: 9px;
 }
 
-@media (min-width: 650px) and (max-width: 860px) {
+@media (min-width: 650px) and (max-width: 950px) {
   .home-con {
     background-image: url("https://images.pexels.com/photos/6026251/pexels-photo-6026251.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load");
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .home-card {
     height: 20vh;
-    margin-top: 70px;
+    /* margin-top: 370px; */
     /* border: 2px solid white; */
+    margin-left: -10px;
   }
 
   .home-head {

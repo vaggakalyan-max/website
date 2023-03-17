@@ -491,7 +491,7 @@ const App = () => {
         <Footer />
         <section className="footer-section">
           <div className="text-and-all-icons-con">
-            <p className="social-heading">Get in Touch ------------------</p>
+            <p className="social-heading">Get in Touch</p>
 
             <div className="all-icons-con">
               <div className="icon-con">
