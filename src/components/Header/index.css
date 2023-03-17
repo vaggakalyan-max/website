@@ -46,7 +46,7 @@
   }
 }
 
-@media (min-width: 950px) {
+@media (min-width: 1000px) {
   .nav-con {
     height: 10vh;
   }
