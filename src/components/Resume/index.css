@@ -91,7 +91,7 @@
 @media only screen and (min-width: 850px) and (max-width: 1001px) {
   .Resume-my-image {
     width: 20vw;
-    max-height: 5vh;
+    max-height: 8vh;
     align-self: flex-start;
     /* border-radius: 50px; */
   }

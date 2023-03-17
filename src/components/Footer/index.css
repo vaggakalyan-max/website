@@ -49,6 +49,12 @@
   margin-top: 4px;
 }
 
+@media only screen and (min-width: 850px) and (max-width: 1001px) {
+  .footer-section {
+    height: 3vh;
+  }
+}
+
 @media (min-width: 768px) {
   .footer-section {
     height: 10vh;
