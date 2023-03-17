@@ -47,10 +47,10 @@
   font-size: 9px;
 }
 
-@media (min-width: 650px) and (max-width: 950px) {
+@media only screen and (min-width: 850px) and (max-width: 1001px) {
   .home-con {
     background-image: url("https://images.pexels.com/photos/6026251/pexels-photo-6026251.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load");
-    height: 50vh;
+    height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
