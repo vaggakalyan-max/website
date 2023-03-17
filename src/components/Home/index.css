@@ -58,9 +58,9 @@
 
   .home-card {
     height: 20vh;
-    margin-top: 570px;
+    margin-top: 370px;
     border: 2px solid white;
-    margin-left: -10px;
+    margin-left: 20px;
   }
 
   .home-head {
