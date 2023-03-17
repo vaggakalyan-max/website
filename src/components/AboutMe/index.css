@@ -6,6 +6,7 @@
   align-items: center;
   background-color: #edf0f5;
   flex-direction: column;
+  padding-top: 3vh;
 }
 
 .about-text-con {
@@ -37,4 +38,16 @@
 .my-image {
   width: 20vw;
   height: 55vh;
+}
+
+@media only screen and (min-width: 850px) and (max-width: 1001px) {
+  .about-con {
+    width: 100vw;
+    min-height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #edf0f5;
+    flex-direction: column;
+  }
 }
