@@ -60,7 +60,7 @@
     height: 20vh;
     margin-top: 70px;
     border: 2px solid white;
-    margin-left: 20px;
+    margin-left: 30px;
   }
 
   .home-head {
@@ -91,7 +91,7 @@
     width: 30vw;
     height: 30vh;
     /* border: 2px solid white; */
-    margin-top: -250px;
+    margin-top: -200px;
     transform: rotate(20deg);
     margin-left: 270px;
   }
