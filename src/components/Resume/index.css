@@ -63,7 +63,6 @@
   overflow: hidden;
   white-space: nowrap;
   border-right: 1px solid transparent;
-  width: 10ch;
   align-self: flex-start;
   /* background-color: aquamarine; */
   margin-top: 5px;
@@ -89,7 +88,7 @@
   align-self: flex-start;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 868px) {
   .Resume-my-image {
     width: 20vw;
     height: 55vh;
