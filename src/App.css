@@ -104,6 +104,12 @@
   }
 }
 
+@media only screen and (min-width: 850px) and (max-width: 1000px) {
+  .portfolio-sec {
+    margin-top: 2vh;
+  }
+}
+
 /* contact-section  */
 
 .contact-section {
@@ -158,6 +164,13 @@
   color: black;
   /* height: 80vh; */
 }
+
+@media only screen and (min-width: 850px) and (max-width: 1000px) {
+  .contact-section {
+    margin-top: 2vh;
+  }
+}
+
 @media (min-width: 768px) {
   .contact-mail-con {
     /* background-color: lightblue; */
