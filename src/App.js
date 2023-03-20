@@ -317,7 +317,7 @@ const App = () => {
         >
           <div className="contact-cards-container">
             {/* mark for tomorrow */}
-            <div className="section-title mb-5 pb-2" data-aos="fade-up">
+            <div className="section-title mb-5 pb-2">
               <h2 className="section-heading mt-3">CONTACT ME</h2>
               <p className="description-contact">
                 Send your Queries through Mail
