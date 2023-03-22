@@ -31,6 +31,11 @@
   text-align: center;
 }
 
+.icon-con:hover {
+  background-color: #000000;
+  color: #a9acae;
+}
+
 .footer-logo {
   align-self: flex-start;
   align-items: auto;
@@ -39,6 +44,10 @@
 .social-icon {
   color: #282c34;
   font-size: 20px;
+}
+
+.social-icon:hover {
+  color: white;
 }
 
 .social-heading {

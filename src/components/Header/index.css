@@ -1,28 +1,19 @@
-/* .Header-Con {
-  background-color: #282c34;
-  width: 100vw;
-  height: 10vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  position: fixed;
-} */
-
-/* .Nav-container {
-  width: 95vw;
-  height: 10vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-
-}  */
+.nav-tab-name {
+  color: white;
+}
 
 a {
+  color: whitesmoke;
+}
+a:hover {
   color: white;
   text-decoration: none;
 }
+/* .nav-each-item {
+  background-color: lightblue;
+  height: 8vh;
+  
+} */
 
 @media only screen and (min-width: 850px) and (max-width: 1000px) {
   .nav-con {

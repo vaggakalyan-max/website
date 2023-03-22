@@ -78,14 +78,19 @@
   width: 180px;
   height: 40px;
   border-radius: 10px;
-  color: white;
-  background-color: #282c34;
+  color: black;
+  font-weight: 400;
+  background-color: #a9acae;
   text-align: center;
   text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;
   align-self: flex-start;
+}
+.Resume-Download-anc:hover {
+  background-color: #282c34;
+  color: white;
 }
 
 @media only screen and (min-width: 850px) and (max-width: 1000px) {

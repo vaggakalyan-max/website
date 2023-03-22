@@ -161,8 +161,8 @@ const App = () => {
           >
             <div className="navbar-nav ml-auto nav-each-item">
               <a className="homeSection" id="navItem1" href="#homeSection">
-                <i className="fas fa-home-alt"></i> Home
-                <span className="sr-only">(current)</span>
+                <i className="nav-tab-name"></i> Home
+                {/* <span className="sr-only">(current)</span> */}
               </a>
               <a className="aboutSection" href="#aboutSection" id="navItem2">
                 <i className="fa-solid fa-user"></i> About
@@ -207,7 +207,12 @@ const App = () => {
 
         {/* <AboutMe /> */}
         <AboutMe />
-        <section className="about-con" data-aos="fade-up" id="aboutSection">
+        <section
+          className="about-con"
+          data-aos="fade-up"
+          data-aos-delay="100"
+          id="aboutSection"
+        >
           <h1 className="about-head">About Me</h1>
 
           <div className="about-text-con">
@@ -283,6 +288,7 @@ const App = () => {
           id="portfolioSection"
           data-aos="fade-up"
           data-aos-delay="100"
+          data-aos-once="true"
         >
           <h1 className="Portfolio-head">Portfolio</h1>
           <div className="portfolio-projects">
@@ -314,6 +320,7 @@ const App = () => {
           id="contactSection"
           data-aos="fade-up"
           data-aos-delay="100"
+          data-aos-once="true"
         >
           <div className="contact-cards-container">
             {/* mark for tomorrow */}
