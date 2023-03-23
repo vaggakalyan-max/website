@@ -32,7 +32,7 @@
 }
 
 .icon-con:hover {
-  background-color: #000000;
+  background-color: #ffcd03;
   color: #a9acae;
 }
 
@@ -46,9 +46,9 @@
   font-size: 20px;
 }
 
-.social-icon:hover {
+/* .social-icon:hover {
   color: white;
-}
+} */
 
 .social-heading {
   color: white;
@@ -63,6 +63,10 @@
     color: white;
     margin-top: 5px;
   }
+  .icon-con:hover {
+    background-color: #ffcd03;
+    color: #a9acae;
+  }
 }
 
 @media (min-width: 1000px) {
@@ -76,5 +80,10 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .icon-con:hover {
+    background-color: #ffcd03;
+    color: #a9acae;
   }
 }

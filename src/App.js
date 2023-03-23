@@ -17,6 +17,8 @@ import ProjectItem from "./components/ProjectItem";
 import TabItem from "./components/TabItem";
 import "./App.css";
 
+// Sai Teja's Code
+
 const tabsList = [
   { tabId: "STATIC", displayText: "Static" },
   { tabId: "RESPONSIVE", displayText: "Responsive" },
@@ -115,10 +117,6 @@ const projectsList = [
 const App = () => {
   const form = useRef();
   const [activeTabId, setActiveTabId] = useState(tabsList[0].tabId);
-  // const [fullname, setUserName] = useState("");
-  // const [email, setMail] = useState("");
-  // const [phone, setPhone] = useState("");
-  // const [msg, setMsg] = useState("");
 
   const clickTabItem = (tabId) => {
     setActiveTabId(tabId);
@@ -134,25 +132,6 @@ const App = () => {
   const filteredProjects = getFilteredProjects();
 
   console.log(filteredProjects);
-  // console.log(activeTabId);
-
-  // Mail Form
-
-  // const onChangeName = (event) => {
-  //   setUserName(event.target.value);
-  // };
-
-  // const onChangeMail = (event) => {
-  //   setMail(event.target.value);
-  // };
-
-  // const onChangeMobileNum = (event) => {
-  //   setPhone(event.target.value);
-  // };
-
-  // const onChangeMessage = (event) => {
-  //   setMsg(event.target.value);
-  // };
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -335,7 +314,7 @@ const App = () => {
           id="portfolioSection"
           data-aos="fade-up"
           data-aos-delay="100"
-          data-aos-once="true"
+          // data-aos-once="true"
         >
           <h1 className="Portfolio-head">Portfolio</h1>
           <div className="portfolio-projects">
@@ -367,7 +346,7 @@ const App = () => {
           id="contactSection"
           data-aos="fade-up"
           data-aos-delay="100"
-          data-aos-once="true"
+          // data-aos-once="true"
         >
           <div className="contact-cards-container">
             {/* mark for tomorrow */}
