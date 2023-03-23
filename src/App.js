@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
+// npm i emailjs/browser
 import { MdLocationPin, MdWifiCalling3 } from "react-icons/md";
 import { HiMail } from "react-icons/hi";
 import { BsLinkedin, BsTwitter, BsFacebook } from "react-icons/bs";
@@ -111,7 +113,12 @@ const projectsList = [
 ];
 
 const App = () => {
+  const form = useRef();
   const [activeTabId, setActiveTabId] = useState(tabsList[0].tabId);
+  // const [fullname, setUserName] = useState("");
+  // const [email, setMail] = useState("");
+  // const [phone, setPhone] = useState("");
+  // const [msg, setMsg] = useState("");
 
   const clickTabItem = (tabId) => {
     setActiveTabId(tabId);
@@ -128,6 +135,46 @@ const App = () => {
 
   console.log(filteredProjects);
   // console.log(activeTabId);
+
+  // Mail Form
+
+  // const onChangeName = (event) => {
+  //   setUserName(event.target.value);
+  // };
+
+  // const onChangeMail = (event) => {
+  //   setMail(event.target.value);
+  // };
+
+  // const onChangeMobileNum = (event) => {
+  //   setPhone(event.target.value);
+  // };
+
+  // const onChangeMessage = (event) => {
+  //   setMsg(event.target.value);
+  // };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_24pgz37",
+        "template_aepixx4",
+        form.current,
+        "jIFjw41DJxfn4ByJL"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          console.log("message sent");
+          e.target.reset();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
 
   return (
     <div className="main">
@@ -356,45 +403,40 @@ const App = () => {
                     <h4>Call:</h4>
                     <p>+91 9032833121</p>
                   </div>
-                  {/* <iframe
-                    title={""}
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15125.533395693468!2d84.22316832620785!3d18.601819597786072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3c536c6e44099f%3A0xb501168849671a61!2sTekkali%2C%20Andhra%20Pradesh%20532201!5e0!3m2!1sen!2sin!4v1667020558534!5m2!1sen!2sin"
-                    width="600"
-                    height="450"
-                    style="border:0; width: 100%; height: 314px;"
-                    allowFullScreen=""
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  ></iframe> */}
                 </div>
               </div>
               <div className="mail-con">
-                <div className="box d-flex flex-column  align-items-stretch">
+                <div className="box d-flex flex-column align-items-stretch">
                   <h2 className="mb-5">SEND MESSAGE</h2>
-                  <form id="form">
-                    <span id="span"></span>
+                  {/* <form id="form"> */}
+                  <form ref={form} onSubmit={sendEmail}>
                     <div className="inputBox">
                       <input
+                        // onChange={onChangeName}
                         type="text"
-                        name="name"
+                        name="user_name"
                         id="fullname"
                         placeholder="Enter your Full Name"
                       />
-                      <label htmlFor="fullname">Full Name</label>
-                      <small>Error message</small>
+                      <label htmlFor="fullname">Name</label>
+
+                      {/* <small>Error message</small> */}
                     </div>
+
                     <div className="inputBox">
                       <input
+                        // onChange={onChangeMail}
                         type="text"
-                        name="email"
+                        name="user_email"
                         id="email"
                         placeholder="Enter your valid email address"
                       />
-                      <label htmlFor="email">Email</label>
+                      <label htmlFor="mail">Email</label>
                       <small>Error message</small>
                     </div>
                     <div className="inputBox">
                       <input
+                        // onChange={onChangeMobileNum}
                         type="text"
                         name="phonenumber"
                         id="phonenumber"
@@ -405,6 +447,7 @@ const App = () => {
                     </div>
                     <div className="inputBox">
                       <textarea
+                        // onChange={onChangeMessage}
                         type="textarea"
                         placeholder="Type your message here"
                         name="message"
@@ -416,9 +459,10 @@ const App = () => {
                       <small>Error message</small>
                     </div>
 
-                    <button type="submit" id="sub">
+                    <button type="submit" id="sub" value="Send">
                       Send
                     </button>
+                    {/* <input type="submit" value="Send" /> */}
                   </form>
                 </div>
               </div>

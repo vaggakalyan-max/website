@@ -39,13 +39,13 @@
     }
   ],
   "rules": {
+    "linebreak-style": ["error", "windows"],
     "prettier/prettier": [
       "error",
       {
         "endOfLine": "auto"
       }
     ],
-    "linebreak-style": ["error", "windows"],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/state-in-constructor": "off",
     "react/react-in-jsx-scope": "off",
