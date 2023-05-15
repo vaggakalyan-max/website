@@ -117,10 +117,15 @@ const projectsList = [
 const App = () => {
   const form = useRef();
   const [activeTabId, setActiveTabId] = useState(tabsList[0].tabId);
+  const [fullname, setFullName] = useState("");
+  const [mail, setMail] = useState("");
+  // const [nameError, setNameError] = useState("");
 
-  const clickTabItem = (tabId) => {
+  // let isformValid;
+
+  function clickTabItem(tabId) {
     setActiveTabId(tabId);
-  };
+  }
 
   const getFilteredProjects = () => {
     const allFilteredProjects = projectsList.filter(
@@ -131,29 +136,44 @@ const App = () => {
 
   const filteredProjects = getFilteredProjects();
 
-  console.log(filteredProjects);
+  // console.log(filteredProjects);
 
-  const sendEmail = (e) => {
+  const onChangeName = (event) => {
+    setFullName(event.target.value);
+  };
+
+  const onChangeMail = (event) => {
+    setMail(event.target.value);
+  };
+
+  function sendEmail(e) {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_24pgz37",
-        "template_aepixx4",
-        form.current,
-        "jIFjw41DJxfn4ByJL"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          console.log("message sent");
-          e.target.reset();
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-  };
+    if (fullname === "" && mail === "") {
+      console.log("bot");
+      // eslint-disable-next-line no-alert
+      alert("Name, Mail and Message Required");
+    } else {
+      console.log("user");
+      emailjs
+        .sendForm(
+          "service_24pgz37",
+          "template_aepixx4",
+          form.current,
+          "jIFjw41DJxfn4ByJL"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            console.log("message sent");
+            e.target.reset();
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+    }
+  }
 
   return (
     <div className="main">
@@ -391,20 +411,19 @@ const App = () => {
                   <form ref={form} onSubmit={sendEmail}>
                     <div className="inputBox">
                       <input
-                        // onChange={onChangeName}
+                        onChange={onChangeName}
                         type="text"
                         name="user_name"
                         id="fullname"
                         placeholder="Enter your Full Name"
                       />
                       <label htmlFor="fullname">Name</label>
-
-                      {/* <small>Error message</small> */}
+                      <small>Error message</small>
                     </div>
 
                     <div className="inputBox">
                       <input
-                        // onChange={onChangeMail}
+                        onChange={onChangeMail}
                         type="text"
                         name="user_email"
                         id="email"
