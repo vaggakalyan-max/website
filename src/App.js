@@ -313,7 +313,8 @@ const App = () => {
               <a
                 className="Resume-Download-anc"
                 // href="https://publuu.com/flip-book/98864/270374/page/1"
-                href="https://drive.google.com/file/d/1DyRMvtgzNC-P6pNkmWOVkalVzmRCwpw2/view"
+                // href="https://drive.google.com/file/d/1DyRMvtgzNC-P6pNkmWOVkalVzmRCwpw2/view"
+                href="https://docs.google.com/document/d/1gPvylTIu-uixFDd4GGJpp2licWq5lUGUvidiS_-T1R0/view"
                 target={"_blank"}
                 rel="noopener noreferrer"
               >
@@ -368,6 +369,8 @@ const App = () => {
           data-aos-delay="100"
           // data-aos-once="true"
         >
+          {/* <h1 className="Resume-head">Resume</h1> */}
+
           <div className="contact-cards-container">
             {/* mark for tomorrow */}
             <div className="section-title mb-5 pb-2">
