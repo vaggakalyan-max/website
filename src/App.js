@@ -297,13 +297,15 @@ const App = () => {
               <h1 className="Resume-description-title">Skills</h1>
 
               <ul className="Resume-skills-list">
-                <li>Python</li>
-                <li>JavaScript</li>
                 <li>React.Js</li>
                 <li>Node.Js</li>
                 <li>Express.Js</li>
-                <li>SQLite</li>
+                <li>JavaScript</li>
+                <li>Python</li>
                 <li>HTML</li>
+                <li>MySQL</li>
+                <li>MongoDb</li>
+                <li>SQLite</li>
                 <li>CSS</li>
                 <li>Flexbox</li>
                 <li>Bootstrap</li>
