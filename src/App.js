@@ -9,7 +9,7 @@ import { AiFillInstagram } from "react-icons/ai";
 import { VscGithub } from "react-icons/vsc";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Header from "./components/Header";
-import Home from "./components/Home";
+import Home from "./components/Home";    
 import AboutMe from "./components/AboutMe";
 import Resume from "./components/Resume";
 import Footer from "./components/Footer";
