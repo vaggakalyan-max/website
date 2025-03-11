@@ -419,3 +419,13 @@
 .contact-cards-container {
   font-family: Roboto;
 }
+
+.Resume-my-image {
+  height: 280px;
+}
+
+@media (max-width: 500px) {
+  .Resume-my-image {
+    height: 150px;
+  }
+}

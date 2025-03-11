@@ -9,7 +9,7 @@ import { AiFillInstagram } from "react-icons/ai";
 import { VscGithub } from "react-icons/vsc";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Header from "./components/Header";
-import Home from "./components/Home";    
+import Home from "./components/Home";
 import AboutMe from "./components/AboutMe";
 import Resume from "./components/Resume";
 import Footer from "./components/Footer";
@@ -265,7 +265,7 @@ const App = () => {
             <h1 className="description-title">
               I&apos;m Sai Teja Full Stack Web Developer
             </h1>
-            <p className="my-description">
+            {/* <p className="my-description">
               I&apos;m curious about IT. My interest in web development, which
               includes building websites and applications, has recently grown. I
               wish to develop my expertise in this area. I&apos;m trying to find
@@ -273,6 +273,17 @@ const App = () => {
               I would give you my complete dedication and contribute to your
               team in a positive and amiable way. I&apos;m searching for job as
               a Full-Stack Developer or MERN stack engineer right now.
+            </p> */}
+            <p className="my-description">
+              I&apos;m a passionate Full-Stack Developer with 2 years of
+              experience in web development, specializing in building dynamic
+              websites and applications. My expertise lies in the MERN stack,
+              and I&apos;m always eager to expand my skill set. I&apos;m looking
+              for an opportunity to collaborate with a team where I can
+              contribute my knowledge, problem-solving skills, and dedication to
+              delivering high-quality solutions. My goal is to create impactful
+              applications while continuously growing as a developer in a
+              supportive and innovative environment.
             </p>
           </div>
         </section>
@@ -302,21 +313,22 @@ const App = () => {
                 <li>Express.Js</li>
                 <li>JavaScript</li>
                 <li>Python</li>
-                <li>HTML</li>
                 <li>MySQL</li>
                 <li>MongoDb</li>
                 <li>SQLite</li>
+                <li>HTML</li>
                 <li>CSS</li>
                 <li>Flexbox</li>
                 <li>Bootstrap</li>
                 <li>GitHub</li>
+                <li>AWS EC2 and CI/CD</li>
               </ul>
 
               <a
                 className="Resume-Download-anc"
                 // href="https://publuu.com/flip-book/98864/270374/page/1"
                 // href="https://drive.google.com/file/d/1DyRMvtgzNC-P6pNkmWOVkalVzmRCwpw2/view"
-                href="https://docs.google.com/document/d/1gPvylTIu-uixFDd4GGJpp2licWq5lUGUvidiS_-T1R0/view"
+                href="https://drive.google.com/file/d/1W8r2HXe56vrLaPpxuix92gQ9X3q0towO/view?usp=drive_link"
                 target={"_blank"}
                 rel="noopener noreferrer"
               >
@@ -326,7 +338,7 @@ const App = () => {
             <img
               alt="Candidate-Img2"
               className="Resume-my-image"
-              src="https://res.cloudinary.com/dwwzfhucu/image/upload/v1678806085/IMG_20220801_001248_cmxz2g.jpg"
+              src="https://i.ibb.co/DPbncQb8/c4ed4061-9f8a-43be-8edf-daa0a48787f3-1.jpg"
             />
           </div>
         </section>
@@ -535,7 +547,10 @@ const App = () => {
                   target={"_blank"}
                   rel="noopener noreferrer"
                 >
-                  <AiFillInstagram className="social-icon" />
+                  <AiFillInstagram
+                    className="social-icon"
+                    // style={{ width: "100px" }}
+                  />
                 </a>
               </div>
             </div>
