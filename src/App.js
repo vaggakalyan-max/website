@@ -262,9 +262,7 @@ const App = () => {
           <h1 className="about-head">About Me</h1>
 
           <div className="about-text-con">
-            <h1 className="description-title">
-              I&apos;m Sai Teja Full Stack Web Developer
-            </h1>
+            <h1 className="description-title">I&apos;m Sai Teja</h1>
             {/* <p className="my-description">
               I&apos;m curious about IT. My interest in web development, which
               includes building websites and applications, has recently grown. I
@@ -275,15 +273,16 @@ const App = () => {
               a Full-Stack Developer or MERN stack engineer right now.
             </p> */}
             <p className="my-description">
-              I&apos;m a passionate Full-Stack Developer with 2 years of
-              experience in web development, specializing in building dynamic
-              websites and applications. My expertise lies in the MERN stack,
-              and I&apos;m always eager to expand my skill set. I&apos;m looking
-              for an opportunity to collaborate with a team where I can
-              contribute my knowledge, problem-solving skills, and dedication to
-              delivering high-quality solutions. My goal is to create impactful
-              applications while continuously growing as a developer in a
-              supportive and innovative environment.
+              Full Stack Developer with 3.5 years of experience in building
+              scalable, high-performance web applications using the MERN stack
+              Skilled in designing and deploying REST APIs, microservices, and
+              implementing CI/CD pipelines on cloud platforms like AWS.
+              Experienced in both frontend and backend development, with a
+              strong foundation in SQL-based RDBMS and modern UI frameworks.
+              Proficient in agile methodologies, version control Git, Bitbucket,
+              and collaboration tools like JIRA. Currently expanding into AI/ML
+              integration to bring intelligent features into real-world
+              solutions.
             </p>
           </div>
         </section>
@@ -322,13 +321,14 @@ const App = () => {
                 <li>Bootstrap</li>
                 <li>GitHub</li>
                 <li>AWS EC2 and CI/CD</li>
+                <li>AI/ML Integration</li>
               </ul>
 
               <a
                 className="Resume-Download-anc"
                 // href="https://publuu.com/flip-book/98864/270374/page/1"
                 // href="https://drive.google.com/file/d/1DyRMvtgzNC-P6pNkmWOVkalVzmRCwpw2/view"
-                href="https://drive.google.com/file/d/1W8r2HXe56vrLaPpxuix92gQ9X3q0towO/view?usp=drive_link"
+                href="https://drive.google.com/file/d/19o6fDKeP4r5N2PgmyKXeWSW1SX7aoXov/view?usp=sharing"
                 target={"_blank"}
                 rel="noopener noreferrer"
               >
