@@ -18,7 +18,7 @@ import ProjectItem from "./components/ProjectItem";
 import TabItem from "./components/TabItem";
 import "./App.css";
 
-// Sai Teja's Code
+// Code
 
 const tabsList = [
   { tabId: "STATIC", displayText: "Static" },
