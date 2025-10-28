@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 // npm i emailjs/browser
@@ -24,7 +25,7 @@ const tabsList = [
   { tabId: "RESPONSIVE", displayText: "Responsive" },
   { tabId: "DYNAMIC", displayText: "Dynamic" },
 ];
-
+     
 const projectsList = [
   {
     projectId: 0,
@@ -185,7 +186,7 @@ const App = () => {
             <img
               alt="site-logo"
               className="logo-image"
-              src="data:image/png;base64,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"
+              src="https://img.myloview.com/posters/kv-logo-initial-letter-logo-design-template-vector-illustration-700-180722166.jpg"
             />
           </a>
           <button
@@ -216,13 +217,13 @@ const App = () => {
               <a className="resumeSection" href="#resumeSection" id="navItem3">
                 <i className="fa-solid fa-file"></i> Resume
               </a>
-              <a
+              {/* <a
                 className="portfolioSection"
                 href="#portfolioSection"
                 id="navItem4"
               >
                 <i className="fa-solid fa-sliders"></i> Portfolio
-              </a>
+              </a> */}
               <a
                 className="contactSection"
                 href="#contactSection"
@@ -241,7 +242,7 @@ const App = () => {
         <section className="home-con" id="homeSection">
           <div className="home-card">
             <h1 className="home-head">Hello!</h1>
-            <p className="home-para">I&apos;m Sai Teja</p>
+            <p className="home-para">I&apos;m Kalyan Vagga</p>
             <a className="anchor-btn" href="#aboutSection">
               About me
             </a>
@@ -262,7 +263,7 @@ const App = () => {
           <h1 className="about-head">About Me</h1>
 
           <div className="about-text-con">
-            <h1 className="description-title">I&apos;m Sai Teja</h1>
+            <h1 className="description-title">I&apos;m Kalyan Vagga</h1>
             {/* <p className="my-description">
               I&apos;m curious about IT. My interest in web development, which
               includes building websites and applications, has recently grown. I
@@ -273,16 +274,13 @@ const App = () => {
               a Full-Stack Developer or MERN stack engineer right now.
             </p> */}
             <p className="my-description">
-              Full Stack Developer with 3.5 years of experience in building
-              scalable, high-performance web applications using the MERN stack
-              Skilled in designing and deploying REST APIs, microservices, and
-              implementing CI/CD pipelines on cloud platforms like AWS.
-              Experienced in both frontend and backend development, with a
-              strong foundation in SQL-based RDBMS and modern UI frameworks.
-              Proficient in agile methodologies, version control Git, Bitbucket,
-              and collaboration tools like JIRA. Currently expanding into AI/ML
-              integration to bring intelligent features into real-world
-              solutions.
+              Able to develop infrastructure in AWS using Terraform. Certified
+              in RHCSA, AWS Cloud Practitioner, and Red Hat OpenShift-DO280 with
+              hands-on knowledge of OpenShift troubleshooting, container
+              orchestration, and cluster administration. Experienced in handling
+              ticket-based support, system reboots, log analysis, and
+              automation. Seeking an opportunity to contribute as an OpenShift
+              Administrator in a dynamic enterprise environment.
             </p>
           </div>
         </section>
@@ -300,35 +298,30 @@ const App = () => {
             <div className="Resume-text-con">
               <h1 className="Resume-description-title">Profile</h1>
               <p className="Resume-my-description">
-                Name: Sai Teja <br /> <br /> Location: Hyderabad <br /> <br />
-                Email: saitejamacha123@gmail.com <br /> <br /> Mobile No:
-                9032833121
+                Name: Kalyan Vagga <br /> <br /> Location: Hyderabad <br />{" "}
+                <br />
+                Email: kalyan.vagga@gmail.com <br /> <br /> Mobile No:
+                9052911863
               </p>
               <h1 className="Resume-description-title">Skills</h1>
 
               <ul className="Resume-skills-list">
-                <li>React.Js</li>
-                <li>Node.Js</li>
-                <li>Express.Js</li>
-                <li>JavaScript</li>
-                <li>Python</li>
-                <li>MySQL</li>
-                <li>MongoDb</li>
-                <li>SQLite</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Flexbox</li>
-                <li>Bootstrap</li>
-                <li>GitHub</li>
-                <li>AWS EC2 and CI/CD</li>
-                <li>AI/ML Integration</li>
+                <li>Hashicrop Terraform</li>
+                <li>Openshift Certified</li>
+                <li>Kubernetes</li>
+                <li>Docker</li>
+                <li>RHCSA</li>
+                <li>AWS Certified</li>
+                <li>Jenkins</li>
+                <li>Linux Administration</li>
+                <li>CI/CD Pipelines</li>
               </ul>
 
               <a
                 className="Resume-Download-anc"
                 // href="https://publuu.com/flip-book/98864/270374/page/1"
                 // href="https://drive.google.com/file/d/1DyRMvtgzNC-P6pNkmWOVkalVzmRCwpw2/view"
-                href="https://drive.google.com/file/d/19o6fDKeP4r5N2PgmyKXeWSW1SX7aoXov/view?usp=sharing"
+                href="https://drive.google.com/file/d/1nVE5fyAwspV4QX2AHSc9HTqqpL0bmWvF/view?usp=sharing"
                 target={"_blank"}
                 rel="noopener noreferrer"
               >
@@ -338,13 +331,13 @@ const App = () => {
             <img
               alt="Candidate-Img2"
               className="Resume-my-image"
-              src="https://i.ibb.co/DPbncQb8/c4ed4061-9f8a-43be-8edf-daa0a48787f3-1.jpg"
+              src="https://i.ibb.co/gLgpYrC5/Whats-App-Image-2025-10-28-at-13-07-02.jpg"
             />
           </div>
         </section>
 
         {/* portfolio  */}
-        <section
+        {/* <section
           className="portfolio-sec"
           id="portfolioSection"
           data-aos="fade-up"
@@ -373,7 +366,7 @@ const App = () => {
               ))}
             </ul>
           </div>
-        </section>
+        </section> */}
 
         {/* contact */}
         <section
@@ -385,8 +378,8 @@ const App = () => {
         >
           {/* <h1 className="Resume-head">Resume</h1> */}
 
-          <div className="contact-cards-container">
-            {/* mark for tomorrow */}
+          {/* <div className="contact-cards-container">
+           
             <div className="section-title mb-5 pb-2">
               <h2 className="section-heading mt-3">CONTACT ME</h2>
               <p className="description-contact">
@@ -424,7 +417,7 @@ const App = () => {
               <div className="mail-con">
                 <div className="box d-flex flex-column align-items-stretch">
                   <h2 className="mb-5">SEND MESSAGE</h2>
-                  {/* <form id="form"> */}
+                  
                   <form ref={form} onSubmit={sendEmail}>
                     <div className="inputBox">
                       <input
@@ -451,7 +444,7 @@ const App = () => {
                     </div>
                     <div className="inputBox">
                       <input
-                        // onChange={onChangeMobileNum}
+                       
                         type="text"
                         name="phonenumber"
                         id="phonenumber"
@@ -462,7 +455,7 @@ const App = () => {
                     </div>
                     <div className="inputBox">
                       <textarea
-                        // onChange={onChangeMessage}
+                       
                         type="textarea"
                         placeholder="Type your message here"
                         name="message"
@@ -477,12 +470,12 @@ const App = () => {
                     <button type="submit" id="sub" value="Send">
                       Send
                     </button>
-                    {/* <input type="submit" value="Send" /> */}
+                  
                   </form>
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </section>
 
         {/* navigation to home */}
@@ -503,7 +496,7 @@ const App = () => {
             <div className="all-icons-con">
               <div className="icon-con">
                 <a
-                  href="https://www.linkedin.com/in/saiteja123/"
+                  href="https://www.linkedin.com/in/kalyan-vagga-a24559351"
                   target={"_blank"}
                   rel="noopener noreferrer"
                 >
@@ -513,7 +506,7 @@ const App = () => {
 
               <div className="icon-con">
                 <a
-                  href="https://github.com/Saitejamacha"
+                  href="https://github.com/vaggakalyan-max/"
                   target={"_blank"}
                   rel="noopener noreferrer"
                 >
@@ -523,7 +516,7 @@ const App = () => {
 
               <div className="icon-con">
                 <a
-                  href="https://twitter.com/account/access"
+                  href="https://twitter.com/"
                   target={"_blank"}
                   rel="noopener noreferrer"
                 >
@@ -533,7 +526,7 @@ const App = () => {
 
               <div className="icon-con">
                 <a
-                  href="https://www.facebook.com/macha.saiteja.9"
+                  href="https://www.facebook.com/profile.php?id=100004216516370"
                   target={"_blank"}
                   rel="noopener noreferrer"
                 >
@@ -543,7 +536,7 @@ const App = () => {
 
               <div className="icon-con">
                 <a
-                  href="https://www.instagram.com/saitejamacha/"
+                  href="https://www.instagram.com/kalyan.vagga/"
                   target={"_blank"}
                   rel="noopener noreferrer"
                 >
